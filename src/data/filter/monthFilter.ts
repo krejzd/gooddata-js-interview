@@ -21,8 +21,5 @@ export const getMonthFilter = (C: CatalogHelper, year: number, month: Months, mo
   const from = moment().year(year).month(month).startOf('month');
   const to = moment().year(year).month(monthTo).endOf('month');
 
-  console.log(from.format('YYYY-MM-DD'));
-  console.log(to.format('YYYY-MM-DD'));
-
   return getDayFilter(C, from, to)
 };
