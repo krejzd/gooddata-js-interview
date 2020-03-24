@@ -3,8 +3,8 @@ import {useParams} from "react-router-dom";
 import MonthFilter from "../filters/MonthFilter";
 import Filter from "../filters/Filter";
 import {useFilter} from "../../filter/filter";
-import GrossProfitMonthChart from "./GrossProfitMonthChart";
-import GrossProfitChart from "./GrossProfitChart";
+import GrossProfitMonthChart from "../../charts/grossProfit/GrossProfitMonthChart";
+import GrossProfitChart from "../../charts/grossProfit/GrossProfitChart";
 import {Months} from "../../data/filter/monthFilter";
 
 const GrossProfitView: React.FC = () => {

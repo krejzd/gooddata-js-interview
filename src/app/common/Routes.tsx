@@ -1,6 +1,7 @@
 import React from "react";
 import {Route, Switch} from "react-router-dom";
 import GrossProfitView from "../grossProfitView/GrossProfitView";
+import HomepageView from "../homepageView/HomepageView";
 
 const Routes: React.FC = () => {
   return (
@@ -9,7 +10,7 @@ const Routes: React.FC = () => {
         <GrossProfitView />
       </Route>
       <Route path="/">
-        homepage
+        <HomepageView />
       </Route>
     </Switch>
   );
