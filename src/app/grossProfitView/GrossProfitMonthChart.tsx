@@ -2,7 +2,7 @@ import React, {useContext} from 'react';
 import {ColumnChart} from "@gooddata/react-components";
 import CatalogContext from "../../catalog/context";
 import {getGrossProfitMeasure} from "../../data/measure/grossProfit";
-import {getMonthFilter, Months} from "../../data/filter/monthFilter";
+import {getMonthFilter, monthNames, Months} from "../../data/filter/monthFilter";
 import {Typography} from "@material-ui/core";
 import {useChartStyle} from "../../style/chartStyle";
 
@@ -19,7 +19,7 @@ const GrossProfitMonthChart: React.FC<Props> = ({month}) => {
 
   return (
     <div className={classes.container}>
-      <Typography variant="h5">$ Gross Profit in month {month} of 2016</Typography>
+      <Typography variant="h5">$ Gross Profit in {monthNames[month]} 2016</Typography>
       <div className={classes.chartContainer}>
         <ColumnChart
           measures={measures}
