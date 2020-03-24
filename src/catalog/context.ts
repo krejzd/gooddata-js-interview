@@ -1,5 +1,5 @@
 import React from 'react';
-import {CatalogHelper} from "@gooddata/react-components";
+import CatalogHelperExtended from "./catalogHelper";
 
-const CatalogContext = React.createContext<CatalogHelper>({} as CatalogHelper);
+const CatalogContext = React.createContext<CatalogHelperExtended>({} as CatalogHelperExtended);
 export default CatalogContext;
