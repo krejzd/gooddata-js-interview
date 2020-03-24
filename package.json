@@ -17,6 +17,7 @@
     "typescript": "^3.8.3"
   },
   "scripts": {
+    "prestart": "gdc-catalog-export",
     "start": "cross-env HTTPS=true  react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
