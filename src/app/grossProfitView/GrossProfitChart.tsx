@@ -3,17 +3,20 @@ import {ColumnChart} from "@gooddata/react-components";
 import CatalogContext from "../../catalog/context";
 import {getGrossProfitMeasure} from "../../data/measure/grossProfit";
 import {getViewByMonth} from "../../data/viewBy/month";
+import {Typography} from "@material-ui/core";
+import {useChartStyle} from "../../style/chartStyle";
 
 const GrossProfitChart: React.FC = () => {
   const C = useContext(CatalogContext);
+  const classes = useChartStyle();
 
   const measures = [getGrossProfitMeasure(C)];
   const viewBy = getViewByMonth(C);
 
   return (
-    <div>
-      <h1>$ Gross Profit - All months</h1>
-      <div style={{height: 400}}>
+    <div className={classes.container}>
+      <Typography variant="h5">$ Gross Profit - All months</Typography>
+      <div className={classes.chartContainer}>
         <ColumnChart
           measures={measures}
           viewBy={viewBy}

@@ -12,7 +12,13 @@ const Filter: React.FC<Props> = ({children, control}) => {
 
   return (
     <div>
-      <Button onClick={() => setOpen(true)}>Open filter</Button>
+      <Button
+        variant="contained"
+        color="primary"
+        onClick={() => setOpen(true)}
+      >
+        Open filter
+      </Button>
       <Dialog open={open} onClose={() => setOpen(false)}>
         <DialogTitle>Filtration</DialogTitle>
         <DialogContent>
