@@ -1,17 +1,18 @@
-// Copyright (C) 2007-2019, GoodData(R) Corporation. All rights reserved.
-
 import React, { Component } from 'react';
 import '@gooddata/react-components/styles/css/main.css';
 import { CatalogHelper } from '@gooddata/react-components';
 import catalogJson from './catalog.json';
 import CatalogContext from "./catalog/context";
-import GrossProfitView from "./app/grossProfitView/GrossProfitView";
+import {BrowserRouter} from "react-router-dom";
+import Content from "./app/common/Content";
 
 class App extends Component {
     render() {
         return (
           <CatalogContext.Provider value={new CatalogHelper(catalogJson)}>
-            <GrossProfitView />
+              <BrowserRouter>
+                <Content />
+              </BrowserRouter>
           </CatalogContext.Provider>
         );
     }
